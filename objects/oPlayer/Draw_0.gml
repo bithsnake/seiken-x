@@ -8,4 +8,3 @@ draw_text(x,bbox_top-30, "vsp: " + string(vsp))
 draw_text(x,bbox_top-40, "hsp: " + string(hsp))
 draw_text(x,bbox_top-60, "image_speed: " + string(image_speed));
 draw_text(x,bbox_top-80, "image_xscale: " + string(image_xscale));
-draw_text(x,bbox_top+40, "Jumping: " + string(Jumping));
