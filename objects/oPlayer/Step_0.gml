@@ -1,17 +1,15 @@
-// get input
-key_left = keyboard_check(vk_left);
-key_right = keyboard_check(vk_right);
-key_jump = keyboard_check_pressed(vk_space);
-key_dash = keyboard_check_pressed(ord("Z"));
-
-
 //Kimmo Input
 key_left = keyboard_check(ord("A"));
 key_right = keyboard_check(ord("D"));
 key_jump = keyboard_check_pressed(ord("K"));
 key_dash = keyboard_check_pressed(ord("L"));
 
-var move = key_right - key_left;
+if (!standStill) {
+	var move = key_right - key_left;
+} else {
+	var move = 0;	
+}
+
 var isGrounded = place_meeting(x, y + 1, oWalls);
 hsp = move * walksp;
 vsp = vsp + grv;
@@ -114,7 +112,6 @@ if (invincibleTimer > 0 && !playerHurt) {
 	playerHurt = false;
 	sprite_index = sPlayer;
 }
-
 
 show_debug_overlay(true);
 // show_debug_message(oCamera.y);

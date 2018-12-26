@@ -9,6 +9,7 @@ pmove = 0;
 timer = 0;
 dashtimer = 0;
 dashing = false;
+standStill = false;
 airdash = true;
 
 hp = 100;
