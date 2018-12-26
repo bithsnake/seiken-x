@@ -7,8 +7,10 @@ inst = instance_place(x, y, oWallBreakable);
 if inst != noone
 {    
 	inst.hp -= dmg;
+	IsHit = true;
+	audio_play_sound(wEnemyHit, 1, 0);
 	if (inst.hp == 0) {
-		with (inst) instance_destroy();
+		with (inst) {IsDead = true;}
 	}
 	instance_destroy();
 }
@@ -24,7 +26,7 @@ if inst != noone
 	audio_play_sound(wEnemyHit, 1, 0);
 	inst.hp -= dmg;
 	if (inst.hp == 0) {
-		with (inst) instance_destroy();
+		with (inst) {instance_destroy(); audio_play_sound(fxBrake,1000,false);}
 	}
 	instance_destroy();
 }

@@ -17,7 +17,7 @@ image_xscale = oPlayer.image_xscale;
 
 if (shoot && firingDelay < 0) {
 	firingDelay = 5;
-	with(instance_create_layer(x, y, "bullets", oBullet)) {
+	with(instance_create_layer(x+sign(image_xscale)*8, y, "bullets", oBullet)) {
 		speed = 10;
 		rnd = random_range(-3, 3);
 		if (other.key_top && other.key_right) {
