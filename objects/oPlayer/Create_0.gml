@@ -11,7 +11,6 @@ dashtimer = 0;
 dashing = false;
 standStill = false;
 airdash = true;
-Jumping = false;
 
 hp = 100;
 playerHurt = false;
